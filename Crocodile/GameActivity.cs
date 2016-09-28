@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Content.PM;
+using Android.Graphics;
 
 namespace Crocodile
 {
@@ -17,6 +18,7 @@ namespace Crocodile
         private Stack<string> words;
         private List<Category> categories;
         private string[] wordsList; // for reuse
+        private string currentWord;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,9 +29,12 @@ namespace Crocodile
             nextWordButton.Click += new EventHandler(NextWord_Clicked);
 
             wordTextView = FindViewById<TextView>(Resource.Id.textView1);
+            wordTextView.Clickable = true;
+            wordTextView.Click += new EventHandler(onClickWord);
             categories = MainActivity.Categories;
             words = WordList.GenerateWords(categories);
             wordsList = words.ToArray();
+            currentWord = "Новая игра";
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -46,9 +51,12 @@ namespace Crocodile
             {
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
                 alert.SetTitle("Об игре");
-                alert.SetMessage("Классический Крокодил. Для игры необходимо несколько человек. Ведущему " +
-                                 "необходимо с помощью жестов и мимики объяснить слово остальным игрокам." +
-                                 "Игрок, отгадавший слово первым, становится новым ведущим.\n\n Приятной игры!");
+                alert.SetMessage("Классический Крокодил. Для игры необходимо несколько человек. Ведущий " +
+                                 "должен с помощью жестов и мимики объяснить слово остальным игрокам. " +
+                                 "Игрок, отгадавший слово первым, становится новым ведущим.\n\n" +
+                                 "Нажмите на текущее слово, чтобы скрыть/открыть его. " +
+                                 "Когда слово отгадано, нажмите на кнопку 'Следующее слово'. \n\n" +
+                                 "Приятной игры!");
                 alert.SetPositiveButton("OK", (senderAlert, args) => { });
                 Dialog dialog = alert.Create();
                 dialog.Show();
@@ -68,14 +76,32 @@ namespace Crocodile
 
         protected void NextWord_Clicked(Object sender, EventArgs e)
         {
+            wordTextView.SetTextColor(Color.Black);
             if (words.Count != 0)
             {
                 wordTextView.Text = words.Pop();
+                currentWord = wordTextView.Text;
             }
             else
             {
                 words = WordList.GenerateWords(categories);
                 wordTextView.Text = words.Pop();
+                currentWord = wordTextView.Text;
+            }
+        }
+
+        protected void onClickWord(Object sender, EventArgs e)
+        {
+            if (wordTextView.Text == "Новая игра") return;
+            if (wordTextView.Text == currentWord)
+            {
+                wordTextView.SetTextColor(Color.Gray);
+                wordTextView.Text = "скрыто";
+            }
+            else
+            {
+                wordTextView.SetTextColor(Color.Black);
+                wordTextView.Text = currentWord;
             }
         }
     }

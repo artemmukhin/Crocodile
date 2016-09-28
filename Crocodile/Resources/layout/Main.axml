@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:Forms9Patch="clr-namespace:Forms9Patch;assembly=Forms9Patch"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#75ab73">
+    android:background="@drawable/Background" >
     <ImageView
         android:src="@drawable/Croco"
         android:layout_width="wrap_content"
@@ -17,9 +18,16 @@
         android:id="@+id/linearLayoutCategories"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:background="#b7d433"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:background="@drawable/CheckboxFrame"
+        android:layout_width="540.0px"
+        android:layout_height="500.0px">
+     <LinearLayout
+        android:id="@+id/linearLayoutCategories2"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="10.0dp"
+        android:layout_width="280.0px"
+        android:layout_height="480.0px">
         <CheckBox
             android:text="@string/Profession"
             android:layout_width="193.5dp"
@@ -63,6 +71,7 @@
             android:layout_height="wrap_content"
             android:checked="false"
             android:id="@+id/checkBox7" />
+         </LinearLayout>
     </LinearLayout>
     <RelativeLayout
         android:id="@+id/linearLayoutButtons"
@@ -70,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10.0dp">
         <ImageButton
-            android:src="@drawable/Instruction"
+            android:src="@drawable/Button_Instruction"
             android:background="@null"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -78,7 +87,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/InstructionButton" />
         <ImageButton
-            android:src="@drawable/NewGame"
+            android:src="@drawable/Button_NewGame"
             android:background="@null"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"

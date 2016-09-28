@@ -8,6 +8,7 @@ using Android.OS;
 using Android.Preferences;
 using Android.Content.PM;
 
+
 namespace Crocodile
 {
     [Activity(Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/icon",
@@ -26,6 +27,7 @@ namespace Crocodile
 
         protected override void OnCreate(Bundle bundle)
         {
+
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
@@ -75,7 +77,7 @@ namespace Crocodile
                 alert.SetTitle("Об игре");
                 alert.SetMessage("Авторы:\n" +
                                  "Артем Мухин (ortem73@gmail.com)\n" +
-                                 "Екатерина Буланина");
+                                 "Екатерина Буланина (fearlesspf0@gmail.com)");
                 alert.SetPositiveButton("OK", (senderAlert, args) => { });
                 Dialog dialog = alert.Create();
                 dialog.Show();

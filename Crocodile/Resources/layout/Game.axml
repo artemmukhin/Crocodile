@@ -3,28 +3,29 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#75ab73">
-    <ImageView
-        android:src="@drawable/Croco"
-        android:layout_marginTop="10.0dp"
-        android:layout_width="match_parent"
-        android:layout_height="200.0dp"
-        android:id="@+id/imageWord" />
-    <TextView
-        android:text="@string/NewGame"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:gravity="center"
-        android:layout_marginTop="20.0dp"
-        android:textSize="30dp" />
-    <ImageButton
-        android:id="@+id/NextWordButton"
-        android:background="@null"
-        android:layout_marginTop="10.0dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/NextWord"
-        android:layout_marginLeft="0.0dp"
-        android:layout_width="match_parent" />
+    android:background="@drawable/Background">
+  <ImageView
+      android:src="@drawable/Croco"
+      android:layout_marginTop="10.0dp"
+      android:layout_width="match_parent"
+      android:layout_height="200.0dp"
+      android:id="@+id/imageWord" />
+  <TextView
+      android:text="@string/NewGame"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/textView1"
+      android:gravity="center"
+      android:layout_marginTop="20.0dp"
+      android:textSize="30dp"
+      android:clickable="true"/>
+  <ImageButton
+      android:id="@+id/NextWordButton"
+      android:background="@null"
+      android:layout_marginTop="20.0dp"
+      android:layout_height="wrap_content"
+      android:src="@drawable/Button_NextWord"
+      android:layout_marginLeft="0.0dp"
+      android:layout_width="match_parent" />
 </LinearLayout>
