@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceCategory android:title="Основные настройки">
+    <CheckBoxPreference android:key="Adult" android:title="Вам уже исполнилось 18 лет?" android:summary="" android:defaultValue="false" />
+  </PreferenceCategory>
+</PreferenceScreen>

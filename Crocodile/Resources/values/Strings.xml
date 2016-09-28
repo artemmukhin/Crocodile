@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Крокодил</string>
+  <string name="NewGame">Новая игра</string>
+  <string name="Next">Следующее слово</string>
+  <string name="Profession">Профессии</string>
+  <string name="Nature">Природа</string>
+  <string name="People">Личности</string>
+  <string name="Conception">Термины</string>
+  <string name="Character">Персонажи</string>
+  <string name="Other">Разное</string>
+  <string name="Adult">18+</string>
+  <string name="Instruction">Инструкция</string>
+</resources>

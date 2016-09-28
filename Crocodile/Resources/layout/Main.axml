@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#75ab73">
+    <ImageView
+        android:src="@drawable/Croco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/imageViewCroco"
+        android:layout_marginBottom="20.0dp"
+        android:layout_marginTop="10.0dp" />
+    <LinearLayout
+        android:id="@+id/linearLayoutCategories"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="#b7d433"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:text="@string/Profession"
+            android:layout_width="193.5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox1"
+            android:checked="true"
+            android:layout_marginRight="0.0dp" />
+        <CheckBox
+            android:text="@string/People"
+            android:layout_width="193.0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkBox2" />
+        <CheckBox
+            android:text="@string/Nature"
+            android:layout_width="193.0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkBox3" />
+        <CheckBox
+            android:text="@string/Conception"
+            android:layout_width="193.5dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkBox4" />
+        <CheckBox
+            android:text="@string/Character"
+            android:layout_width="192.5dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkBox5" />
+        <CheckBox
+            android:text="@string/Other"
+            android:layout_width="192.5dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:id="@+id/checkBox6" />
+        <CheckBox
+            android:text="@string/Adult"
+            android:layout_width="192.5dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:id="@+id/checkBox7" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dp">
+        <ImageButton
+            android:src="@drawable/Instruction"
+            android:background="@null"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/InstructionButton" />
+        <ImageButton
+            android:src="@drawable/NewGame"
+            android:background="@null"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NewGameButton"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>
