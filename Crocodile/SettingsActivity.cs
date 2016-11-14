@@ -1,11 +1,11 @@
-using Android.App;
+п»їusing Android.App;
 using Android.Preferences;
 using Android.OS;
 using Android.Content.PM;
 
 namespace Crocodile
 {
-    [Activity(Label = "Настройки", Icon = "@drawable/Icon", Theme = "@style/AppBaseTheme",
+    [Activity(Label = "РќР°СЃС‚СЂРѕР№РєРё", Icon = "@drawable/Icon", Theme = "@style/AppBaseTheme",
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class SettingsActivity : PreferenceActivity
     {

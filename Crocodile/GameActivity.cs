@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using Android.App;
 using Android.Content;
@@ -34,7 +34,7 @@ namespace Crocodile
             categories = MainActivity.Categories;
             words = WordList.GenerateWords(categories);
             wordsList = words.ToArray();
-            currentWord = "Новая игра";
+            currentWord = "РќРѕРІР°СЏ РёРіСЂР°";
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -50,13 +50,13 @@ namespace Crocodile
             if (id == Resource.Id.menuHelp)
             {
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.SetTitle("Об игре");
-                alert.SetMessage("Классический Крокодил. Для игры необходимо несколько человек. Ведущий " +
-                                 "должен с помощью жестов и мимики объяснить слово остальным игрокам. " +
-                                 "Игрок, отгадавший слово первым, становится новым ведущим.\n\n" +
-                                 "Нажмите на текущее слово, чтобы скрыть/открыть его. " +
-                                 "Когда слово отгадано, нажмите на кнопку 'Следующее слово'. \n\n" +
-                                 "Приятной игры!");
+                alert.SetTitle("РћР± РёРіСЂРµ");
+                alert.SetMessage("РљР»Р°СЃСЃРёС‡РµСЃРєРёР№ РљСЂРѕРєРѕРґРёР». Р”Р»СЏ РёРіСЂС‹ РЅРµРѕР±С…РѕРґРёРјРѕ РЅРµСЃРєРѕР»СЊРєРѕ С‡РµР»РѕРІРµРє. Р’РµРґСѓС‰РёР№ " +
+                                 "РґРѕР»Р¶РµРЅ СЃ РїРѕРјРѕС‰СЊСЋ Р¶РµСЃС‚РѕРІ Рё РјРёРјРёРєРё РѕР±СЉСЏСЃРЅРёС‚СЊ СЃР»РѕРІРѕ РѕСЃС‚Р°Р»СЊРЅС‹Рј РёРіСЂРѕРєР°Рј. " +
+                                 "РРіСЂРѕРє, РѕС‚РіР°РґР°РІС€РёР№ СЃР»РѕРІРѕ РїРµСЂРІС‹Рј, СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РЅРѕРІС‹Рј РІРµРґСѓС‰РёРј.\n\n" +
+                                 "РќР°Р¶РјРёС‚Рµ РЅР° С‚РµРєСѓС‰РµРµ СЃР»РѕРІРѕ, С‡С‚РѕР±С‹ СЃРєСЂС‹С‚СЊ/РѕС‚РєСЂС‹С‚СЊ РµРіРѕ. " +
+                                 "РљРѕРіРґР° СЃР»РѕРІРѕ РѕС‚РіР°РґР°РЅРѕ, РЅР°Р¶РјРёС‚Рµ РЅР° РєРЅРѕРїРєСѓ 'РЎР»РµРґСѓСЋС‰РµРµ СЃР»РѕРІРѕ'. \n\n" +
+                                 "РџСЂРёСЏС‚РЅРѕР№ РёРіСЂС‹!");
                 alert.SetPositiveButton("OK", (senderAlert, args) => { });
                 Dialog dialog = alert.Create();
                 dialog.Show();
@@ -65,7 +65,7 @@ namespace Crocodile
 
             else if (id == Resource.Id.menuSettings)
             {
-                //Toast.MakeText(this, "настройки", ToastLength.Short).Show();
+                //Toast.MakeText(this, "РЅР°СЃС‚СЂРѕР№РєРё", ToastLength.Short).Show();
                 var intent = new Intent(this, typeof(SettingsActivity));
                 StartActivity(intent);
                 return true;
@@ -92,11 +92,11 @@ namespace Crocodile
 
         protected void onClickWord(Object sender, EventArgs e)
         {
-            if (wordTextView.Text == "Новая игра") return;
+            if (wordTextView.Text == "РќРѕРІР°СЏ РёРіСЂР°") return;
             if (wordTextView.Text == currentWord)
             {
                 wordTextView.SetTextColor(Color.Gray);
-                wordTextView.Text = "скрыто";
+                wordTextView.Text = "СЃРєСЂС‹С‚Рѕ";
             }
             else
             {

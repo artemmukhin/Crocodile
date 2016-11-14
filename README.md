@@ -1,2 +1,2 @@
 # Crocodile
-Party game for 2-10 people
+Party game (2-10 people) for Android written in C# and Xamarin.
